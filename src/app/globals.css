@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-bg: #0A0F1E;
+  --color-brand-surface: #111827;
+  --color-brand-card: #1A2235;
+  --color-brand-border: #1E3A5F;
+  --color-brand-cyan: #00D4FF;
+  --color-brand-cyan-dark: #0099CC;
+  --color-brand-text: #F0F4FF;
+  --color-brand-muted: #8A9BB0;
+
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: var(--font-display), ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0A0F1E;
+  --foreground: #F0F4FF;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for brand alignment */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0F1E;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E3A5F;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00D4FF;
+}
+
+/* Tech dot matrix background */
+.bg-dot-grid {
+  background-image: radial-gradient(rgba(0, 212, 255, 0.1) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+}
+
+/* Circuit pattern overlay */
+.bg-circuit-overlay {
+  background-size: 100px 100px;
+  background-image: 
+    linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Custom focus states */
+*:focus-visible {
+  outline: 2px solid #00D4FF;
+  outline-offset: 2px;
+}
+
+/* Glowing text and boxes */
+.glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+
+.shadow-glow-cyan {
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+}
+
+.shadow-glow-cyan-hover:hover {
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.45);
 }
