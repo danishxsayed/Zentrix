@@ -8,15 +8,12 @@ import { ArrowRight } from "lucide-react";
 interface IndustryCardProps {
   name: string;
   description: string;
-  imageSeed: string;
+  imageUrl: string;
   href: string;
   index: number;
 }
 
-export default function IndustryCard({ name, description, imageSeed, href, index }: IndustryCardProps) {
-  // Use unique seed images from Unsplash or Picsum, electronics/industrial themed.
-  const imageUrl = `https://images.unsplash.com/photo-${imageSeed}?auto=format&fit=crop&w=600&q=80`;
-
+export default function IndustryCard({ name, description, imageUrl, href, index }: IndustryCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 25 }}
@@ -26,13 +23,15 @@ export default function IndustryCard({ name, description, imageSeed, href, index
       whileHover={{ y: -8 }}
       className="group relative h-96 rounded-2xl overflow-hidden border border-brand-border/60 bg-brand-surface/40 flex flex-col justify-end p-6 md:p-8 transition-all duration-300 hover:border-brand-cyan/60 hover:shadow-glow-cyan-hover"
     >
-      {/* Background Image with lazy loading via standard next/image or dynamic img wrapper */}
+      {/* Background Image with optimized Next.js Image */}
       <div className="absolute inset-0 z-0 bg-brand-bg">
-        <img
+        <Image
           src={imageUrl}
           alt={name}
-          className="w-full h-full object-cover opacity-45 group-hover:scale-105 transition-transform duration-700 ease-out"
-          loading="lazy"
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          className="object-cover opacity-45 group-hover:scale-105 transition-transform duration-700 ease-out"
+          priority={index < 4}
         />
         {/* Dark overlay gradients to ensure content readability */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#050811] via-brand-bg/80 to-transparent opacity-90" />
