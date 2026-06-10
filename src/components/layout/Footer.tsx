@@ -45,7 +45,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-sm leading-relaxed font-sans text-brand-muted/95">
-              Precision B2B electronics and semiconductor distribution. Sourcing verified components, supporting complex BOMs, and powering the world's most critical industrial systems.
+              Zentrix System Ltd – Supporting manufacturers, OEMs, research institutions, startups and technology innovators with electronic components, semiconductor technologies, PCB engineering and product development solutions.
             </p>
             <div className="flex space-x-4">
               <a
@@ -109,7 +109,7 @@ export default function Footer() {
                 <li className="flex items-start gap-3">
                   <MapPin className="h-5 w-5 text-brand-cyan shrink-0 mt-0.5" />
                   <span>
-                    Zentrix Electronics,
+                    Zentrix System Ltd,
                     <br />
                     109 New Rd,
                     <br />
@@ -145,7 +145,7 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-brand-border/40 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-sans">
-          <p>&copy; {currentYear} Zentrix Electronics. All rights reserved.</p>
+          <p>© 2026 Zentrix Electronics. All rights reserved.</p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="hover:text-brand-cyan transition-colors">
               Privacy Policy
@@ -153,9 +153,9 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-brand-cyan transition-colors">
               Terms of Use
             </Link>
-            <Link href="/sitemap.xml" className="hover:text-brand-cyan transition-colors">
+            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">
               Sitemap
-            </Link>
+            </a>
           </div>
         </div>
       </div>

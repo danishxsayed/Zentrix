@@ -24,10 +24,10 @@ export default function CTABanner() {
           <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-brand-cyan/30 to-transparent" />
           
           <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-text tracking-tight mb-4">
-            Ready to Source Components?
+            Ready to Request a Quote?
           </h2>
           <p className="text-sm sm:text-base font-sans text-brand-muted max-w-2xl mx-auto mb-8 leading-relaxed">
-            Upload your BOM file or submit your component list. Our team of pricing specialists will verify availability and source your parts within 24 hours.
+            Upload your BOM file or submit your component list. Our engineering team will review your requirements and provide suitable component solutions for your project.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -107,7 +107,7 @@ export default function ProductsClient() {
     <div className="flex flex-col min-h-screen">
       <PageHero
         title="Electronic Component Categories"
-        subtitle="Sourcing precision parts across 10 specialized categories for industrial, automotive, and OEM clients."
+        subtitle="Supplying precision components across 10 specialized categories for industrial, automotive, and OEM clients."
         breadcrumbs={[{ name: "Products", href: "/products" }]}
       />
 
@@ -165,7 +165,7 @@ export default function ProductsClient() {
                       <div className="space-y-4">
                         <div>
                           <span className="text-xs font-display font-bold uppercase tracking-wider text-brand-cyan block mb-1">
-                            Sourced Components
+                            Component Technologies
                           </span>
                           <p className="text-sm font-sans text-brand-text/90 leading-relaxed">
                             {cat.products}
@@ -218,7 +218,7 @@ export default function ProductsClient() {
             {filteredCategories.length === 0 && (
               <div className="col-span-full py-16 text-center">
                 <p className="text-brand-muted text-sm font-sans">
-                  No component categories found matching "{searchQuery}".
+                  No component categories found matching &quot;{searchQuery}&quot;.
                 </p>
               </div>
             )}

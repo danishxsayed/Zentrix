@@ -6,7 +6,6 @@ import { ArrowRight, UploadCloud, Cpu } from "lucide-react";
 import StatsRow from "@/components/ui/StatsRow";
 import IndustryCard from "@/components/ui/IndustryCard";
 import ProductCategoryCard from "@/components/ui/ProductCategoryCard";
-import FeaturedProductCard from "@/components/ui/FeaturedProductCard";
 import TrustStrip from "@/components/ui/TrustStrip";
 import CTABanner from "@/components/ui/CTABanner";
 import SectionHeader from "@/components/ui/SectionHeader";
@@ -126,37 +125,6 @@ export default function Home() {
     },
   ];
 
-  const featuredProducts = [
-    {
-      name: "ESP32 WiFi + Bluetooth Module",
-      category: "RF & Wireless Communication",
-      manufacturer: "Espressif",
-      specs: "Dual-core 240MHz, WiFi 802.11 b/g/n, BLE 4.2, integrated antenna",
-      image: "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&w=400&h=300&q=80",
-    },
-    {
-      name: "STM32F103C8T6 Microcontroller",
-      category: "Integrated Circuits (ICs)",
-      manufacturer: "STMicroelectronics",
-      specs: "72MHz ARM Cortex-M3, 64KB Flash, 20KB RAM, Bluepill layout",
-      image: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&h=300&q=80",
-    },
-    {
-      name: "IRFZ44N Power MOSFET",
-      category: "Semiconductors",
-      manufacturer: "Vishay",
-      specs: "N-Channel, 55V, 49A, TO-220 Package, low Rds(on)",
-      image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=400&h=300&q=80",
-    },
-    {
-      name: "LM7805 Voltage Regulator",
-      category: "Power & Protection",
-      manufacturer: "Texas Instruments",
-      specs: "+5V Fixed Output, 1.5A, TO-220 Package, thermal overload protection",
-      image: "https://images.unsplash.com/photo-1563770660941-20978e870e26?auto=format&fit=crop&w=400&h=300&q=80",
-    },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
       {/* SECTION 2: HERO BANNER */}
@@ -172,17 +140,6 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-8">
             
-            {/* Tech Tag */}
-            <motion.div
-              initial={{ opacity: 0, y: -15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-xs text-brand-cyan font-mono font-semibold"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-ping" />
-              B2B Component Procurement Desk
-            </motion.div>
-
             {/* Main H1 Title */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -201,7 +158,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl font-sans text-brand-muted max-w-3xl leading-relaxed"
             >
-              Supplying precision components to engineers, OEM buyers, and industrial teams worldwide. From passive components to advanced ICs — sourced, verified, and delivered.
+              Supporting manufacturers, OEM buyers, research institutions and technology innovators with electronic components, semiconductor technologies, PCB engineering and product development solutions.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -246,7 +203,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Industries We Serve"
-            subtitle="Powering electronics across the world's most critical sectors with high-reliability parts."
+            subtitle="Powering innovation across industrial, automotive and advanced technology sectors."
           />
           {/* Static visible 4-column grid (desktop), no hidden sliders */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -269,7 +226,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeader
             title="Product Categories"
-            subtitle="A comprehensive range of electronic components for every engineering and industrial application."
+            subtitle="Supplying precision components across 10 specialized categories for industrial, automotive, and OEM clients."
           />
           {/* 5-column grid (desktop), 2-column (tablet), 1-column (mobile) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 md:gap-6">
@@ -280,26 +237,6 @@ export default function Home() {
                 description={cat.description}
                 iconName={cat.iconName}
                 href={cat.href}
-                index={idx}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: FEATURED PRODUCTS */}
-      <section className="py-20 md:py-28 bg-[#050811] relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Featured Products"
-            subtitle="Popular parts, microcontrollers, MOSFETs and regulators trusted by engineers and ready for shipping."
-          />
-          {/* 4-column grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {featuredProducts.map((prod, idx) => (
-              <FeaturedProductCard
-                key={prod.name}
-                product={prod}
                 index={idx}
               />
             ))}

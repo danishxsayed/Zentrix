@@ -77,7 +77,7 @@ export default function ContactForm() {
         </div>
         <h3 className="text-xl font-display font-extrabold text-brand-text">Message Sent!</h3>
         <p className="text-sm font-sans text-brand-muted max-w-sm mx-auto leading-relaxed">
-          Thanks for contacting us, <span className="text-brand-text font-semibold">{formData.fullName}</span>. We've received your message and will respond to <span className="text-brand-text font-mono text-xs">{formData.email}</span> shortly.
+          Thanks for contacting us, <span className="text-brand-text font-semibold">{formData.fullName}</span>. We&apos;ve received your message and will respond to <span className="text-brand-text font-mono text-xs">{formData.email}</span> shortly.
         </p>
         <div className="pt-2">
           <button

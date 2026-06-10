@@ -29,8 +29,8 @@ export default function PcbAssemblyClient() {
     },
     {
       icon: Database,
-      title: "End-to-End Sourcing",
-      desc: "Eliminate supply-chain roadblocks. Zentrix sources 100% of BOM components directly from authorized suppliers, preventing delays.",
+      title: "BOM & Component Management",
+      desc: "Zentrix supports BOM management, component availability review and supply chain coordination to help keep projects on schedule.",
     },
     {
       icon: Award,
@@ -42,28 +42,28 @@ export default function PcbAssemblyClient() {
   const steps = [
     {
       num: "01",
-      title: "Submit Requirements",
-      desc: "Provide your BOM components list and Gerber circuit design files via our RFQ page.",
+      title: "Project Requirements Review",
+      desc: "Submit your BOM, Gerber files and project requirements through our RFQ system.",
     },
     {
       num: "02",
-      title: "Component Sourcing",
-      desc: "Our pricing desk checks real-time authorized inventory channels to secure all board parts.",
+      title: "BOM & Component Planning",
+      desc: "Engineering and procurement review component availability and prepare BOM for production.",
     },
     {
       num: "03",
       title: "PCB Fabrication",
-      desc: "Solder-mask printing and high-precision multilayer copper board fabrication is completed.",
+      desc: "Fabrication completed according to project specifications, including multilayer and high-precision board requirements.",
     },
     {
       num: "04",
       title: "Assembly & Testing",
-      desc: "Precise SMT placement, THT soldering, AOI (Automated Optical Inspection), and X-Ray checks.",
+      desc: "SMT assembly, through-hole assembly, AOI inspection, functional testing and quality verification.",
     },
     {
       num: "05",
-      title: "Quality & Delivery",
-      desc: "Final functional testing verification, vacuum sealing protective packaging, and global express shipping.",
+      title: "Quality Assurance & Production Release",
+      desc: "Final inspection, protective packaging and production release processes completed.",
     },
   ];
 
@@ -82,7 +82,7 @@ export default function PcbAssemblyClient() {
     <div className="flex flex-col min-h-screen">
       <PageHero
         title="Custom PCB Assembly & OEM Services"
-        subtitle="Professional manufacturing, components sourcing, and quality-tested board assembly from design to delivery."
+        subtitle="Professional PCB engineering, assembly and manufacturing solutions from concept to production."
         breadcrumbs={[{ name: "PCB Assembly", href: "/pcb-assembly" }]}
       />
 
@@ -136,7 +136,7 @@ export default function PcbAssemblyClient() {
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs uppercase font-display font-semibold tracking-widest text-brand-cyan">Production Cycle</span>
             <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-text mt-3">
-              Our 5-Step PCB Assembly Process
+              Our 5-Step PCB Engineering & Assembly Process
             </h2>
             <p className="text-sm font-sans text-brand-muted mt-4">
               We manage the entire engineering lifecycle to ensure high-yield rates and rapid delivery.
@@ -205,7 +205,7 @@ export default function PcbAssemblyClient() {
               <ShieldCheck className="h-10 w-10 text-brand-cyan mb-4" />
               <h3 className="text-lg font-display font-bold text-brand-text mb-2">Have Gerber Files and a BOM Ready?</h3>
               <p className="text-xs font-sans text-brand-muted mb-6 leading-relaxed">
-                Upload your files directly to our RFQ procurement desk. Our team will review design rule checks (DRC) and quote within 24 hours.
+                Upload your Gerber files and BOM documentation through our RFQ system. Our engineering team will review your project requirements and provide a tailored quotation within 24 hours.
               </p>
               <Link
                 href="/rfq"

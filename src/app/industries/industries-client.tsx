@@ -87,7 +87,7 @@ export default function IndustriesClient() {
     <div className="flex flex-col min-h-screen">
       <PageHero
         title="Industries We Serve"
-        subtitle="Powering electronics across the world's most critical industrial, automotive, and consumer technology sectors."
+        subtitle="Powering innovation across industrial, automotive and advanced technology sectors."
         breadcrumbs={[{ name: "Industries", href: "/industries" }]}
       />
 
@@ -117,9 +117,6 @@ export default function IndustriesClient() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-card via-brand-card/40 to-transparent" />
                   <div className="absolute bottom-6 left-6 right-6">
-                    <span className="px-3 py-1 text-[10px] font-sans font-bold uppercase tracking-widest bg-brand-cyan/20 border border-brand-cyan/35 text-brand-cyan rounded-full backdrop-blur-sm">
-                      Sector ID: {ind.id.toUpperCase()}
-                    </span>
                     <h2 className="text-2xl md:text-3xl font-display font-extrabold text-brand-text mt-2">
                       {ind.name}
                     </h2>
@@ -169,7 +166,7 @@ export default function IndustriesClient() {
                       href={`/products?industry=${ind.id}`}
                       className="w-full inline-flex items-center justify-center px-5 py-3 rounded-xl bg-brand-surface hover:bg-brand-cyan/10 border border-brand-border hover:border-brand-cyan/45 text-brand-cyan font-sans font-bold text-xs uppercase tracking-wider transition-all duration-300"
                     >
-                      Filter Components Catalog
+                      Explore Component Categories
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>

@@ -10,7 +10,7 @@ export default function ContactClient() {
       icon: MapPin,
       title: "Corporate Headquarters",
       lines: [
-        "Zentrix Electronics",
+        "Zentrix System Ltd",
         "109 New Rd,",
         "London E1 1HJ, United Kingdom",
       ],

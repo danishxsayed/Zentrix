@@ -7,19 +7,14 @@ import { ShieldCheck, Clock, FileSpreadsheet, Mail, Phone, MessageSquare } from 
 export default function RfqClient() {
   const benefits = [
     {
-      icon: Clock,
-      title: "24-Hour Pricing Turnaround",
-      desc: "Our active distribution desk operates 24/6 to return detailed component and PCBA quotes.",
+      icon: MessageSquare,
+      title: "Dedicated RFQ Support",
+      desc: "Our engineering and procurement team supports component, BOM and PCB assembly inquiries for industrial and OEM applications.",
     },
     {
       icon: ShieldCheck,
-      title: "Authorized Source Guarantee",
-      desc: "Every part quoted is verified through strict trace checking to guarantee zero counterfeit components.",
-    },
-    {
-      icon: FileSpreadsheet,
-      title: "Flexible BOM formats",
-      desc: "We accept Excel sheets, CSV exports, or simple text copy-pastes containing part serial numbers.",
+      title: "Quality-Controlled Supply Network",
+      desc: "Delivering reliable component solutions through trusted supplier partnerships and quality-focused standards.",
     },
   ];
 
@@ -27,7 +22,7 @@ export default function RfqClient() {
     <div className="flex flex-col min-h-screen">
       <PageHero
         title="Request a Quote & BOM Upload"
-        subtitle="Upload your bill of materials (BOM) or submit your custom parts inquiry and receive a verified quote in 24 hours."
+        subtitle="Upload your bill of materials (BOM) or submit your component requirements. Our engineering team will review your requirements and provide a tailored quotation within 24 hours."
         breadcrumbs={[{ name: "RFQ", href: "/rfq" }]}
       />
 
@@ -49,7 +44,7 @@ export default function RfqClient() {
               {/* Box 1: Why Source with Zentrix */}
               <div className="bg-brand-card/40 border border-brand-border/60 p-6 md:p-8 rounded-2xl space-y-6">
                 <h3 className="text-xl font-display font-extrabold text-brand-text">
-                  Sourcing Components with Zentrix
+                  Engineering Support with Zentrix
                 </h3>
                 <div className="space-y-6">
                   {benefits.map((bnf) => {
@@ -74,9 +69,9 @@ export default function RfqClient() {
               {/* Box 2: Help & Alternative Contact */}
               <div className="bg-brand-card/45 border border-brand-border/60 p-6 md:p-8 rounded-2xl space-y-6">
                 <div>
-                  <h3 className="text-lg font-display font-bold text-brand-text mb-2">Need Direct Sourcing Help?</h3>
+                  <h3 className="text-lg font-display font-bold text-brand-text mb-2">Need Technical or RFQ Support?</h3>
                   <p className="text-xs font-sans text-brand-muted leading-relaxed">
-                    Have questions about packaging, component alternatives, long lead times, or lifecycle status? Contact our team directly.
+                    Have questions about component alternatives, lead times, packaging requirements or lifecycle status? Our team is here to assist.
                   </p>
                 </div>
 

@@ -40,6 +40,7 @@ function RFQFormInner() {
   useEffect(() => {
     const part = searchParams.get("part");
     if (part) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData((prev) => ({
         ...prev,
         partsList: `Part requested: ${part}\n\nQuantity: `,

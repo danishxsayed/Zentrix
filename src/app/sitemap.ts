@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://zentrix-electronics.com";
-  const routes = ["", "/industries", "/products", "/pcb-assembly", "/rfq", "/contact"];
+  const routes = ["", "/industries", "/products", "/pcb-assembly", "/rfq", "/contact", "/privacy", "/terms"];
 
   return routes.map((route) => ({
     url: `${baseUrl}${route}`,
