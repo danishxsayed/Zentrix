@@ -2,7 +2,7 @@
 
 import PageHero from "@/components/ui/PageHero";
 import RFQForm from "@/components/ui/RFQForm";
-import { ShieldCheck, Clock, FileSpreadsheet, Mail, Phone, MessageSquare } from "lucide-react";
+import { ShieldCheck, Mail, Phone, MessageSquare } from "lucide-react";
 
 export default function RfqClient() {
   const benefits = [

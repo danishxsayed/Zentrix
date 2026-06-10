@@ -137,7 +137,7 @@ export default function ProductsClient() {
           {/* Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <AnimatePresence>
-              {filteredCategories.map((cat, idx) => {
+              {filteredCategories.map((cat) => {
                 const IconComponent = cat.icon;
                 return (
                   <motion.div

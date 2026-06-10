@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, UploadCloud, Cpu } from "lucide-react";
+import { ArrowRight, UploadCloud } from "lucide-react";
 import StatsRow from "@/components/ui/StatsRow";
 import IndustryCard from "@/components/ui/IndustryCard";
 import ProductCategoryCard from "@/components/ui/ProductCategoryCard";

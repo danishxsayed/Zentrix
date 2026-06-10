@@ -3,7 +3,7 @@
 import PageHero from "@/components/ui/PageHero";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Cpu, Settings, Zap, Compass, CheckCircle2, ArrowRight, ShieldCheck, Database, Award } from "lucide-react";
+import { Cpu, Settings, Zap, Compass, ArrowRight, ShieldCheck, Database, Award } from "lucide-react";
 
 export default function PcbAssemblyClient() {
   const services = [

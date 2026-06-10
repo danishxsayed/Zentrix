@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Wrench, Shield, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import CTABanner from "@/components/ui/CTABanner";
 
 export default function IndustriesClient() {

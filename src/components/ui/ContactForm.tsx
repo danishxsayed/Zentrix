@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2 } from "lucide-react";
 
 interface FormErrors {
   fullName?: string;
@@ -64,7 +64,7 @@ export default function ContactForm() {
       
       setIsSubmitting(false);
       setIsSuccess(true);
-    } catch (err) {
+    } catch {
       setIsSubmitting(false);
     }
   };

@@ -170,7 +170,7 @@ function RFQFormInner() {
         colors: ["#00D4FF", "#0099CC", "#FFFFFF", "#1E3A5F"]
       });
 
-    } catch (err) {
+    } catch {
       setIsSubmitting(false);
       setErrors((prev) => ({ ...prev, general: "An error occurred. Please try again." }));
     }
