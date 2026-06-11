@@ -35,6 +35,7 @@ function RFQFormInner() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [countryCode, setCountryCode] = useState("+44");
 
   // Pre-fill parts list if part query param exists
   useEffect(() => {
@@ -281,18 +282,37 @@ function RFQFormInner() {
         </div>
 
         <div className="space-y-2">
-          <label htmlFor="phone" className="text-xs font-sans font-bold uppercase tracking-wider text-brand-muted">
+          <label htmlFor="phone" className="text-xs font-sans font-bold uppercase tracking-wider text-brand-muted block">
             Phone Number
           </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="+44 7721 855393"
-            className="w-full px-4 py-3 rounded-xl bg-brand-surface border border-brand-border/60 hover:border-brand-border focus:border-brand-cyan text-sm text-brand-text transition-colors focus:outline-none"
-          />
+          <div className="flex gap-2">
+            <select
+              value={countryCode}
+              onChange={(e) => setCountryCode(e.target.value)}
+              className="px-3 py-3 rounded-xl bg-brand-surface border border-brand-border/60 hover:border-brand-border focus:border-brand-cyan text-sm text-brand-text transition-colors focus:outline-none w-28 text-center cursor-pointer"
+              aria-label="Country Code"
+            >
+              <option value="+44">UK (+44)</option>
+              <option value="+1">US (+1)</option>
+              <option value="+91">IN (+91)</option>
+              <option value="+49">DE (+49)</option>
+              <option value="+33">FR (+33)</option>
+              <option value="+86">CN (+86)</option>
+              <option value="+65">SG (+65)</option>
+              <option value="+971">AE (+971)</option>
+              <option value="+61">AU (+61)</option>
+              <option value="+81">JP (+81)</option>
+            </select>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="7721 855393"
+              className="flex-1 px-4 py-3 rounded-xl bg-brand-surface border border-brand-border/60 hover:border-brand-border focus:border-brand-cyan text-sm text-brand-text transition-colors focus:outline-none"
+            />
+          </div>
         </div>
       </div>
 

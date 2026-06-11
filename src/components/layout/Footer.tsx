@@ -38,9 +38,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="Zentrix Logo"
-                width={160}
-                height={48}
-                className="h-12 w-auto object-contain rounded-[10px]"
+                width={187}
+                height={56}
+                className="h-14 w-auto object-contain rounded-[10px]"
               />
             </Link>
             <p className="text-sm leading-relaxed font-sans text-brand-muted/95">
@@ -152,9 +152,6 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-brand-cyan transition-colors">
               Terms of Use
             </Link>
-            <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-brand-cyan transition-colors">
-              Sitemap
-            </a>
           </div>
         </div>
       </div>

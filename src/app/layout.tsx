@@ -19,17 +19,17 @@ const displayFont = Space_Grotesk({
 export const metadata: Metadata = {
   title: {
     default: "Zentrix — Industrial Electronics & Semiconductor Solutions",
-    template: "%s | Zentrix Electronics",
+    template: "%s | Zentrix System Ltd",
   },
-  description: "Leading supplier of electronic components for industrial automation, automotive, IoT, medical, telecom, and renewable energy sectors.",
+  description: "Zentrix System Ltd – Supporting manufacturers, OEMs, research institutions, startups and technology innovators with electronic components, semiconductor technologies, PCB engineering and product development solutions.",
   metadataBase: new URL("https://zentrix-electronics.com"), // Placeholder domain for absolute URLs
   openGraph: {
     title: "Zentrix — Industrial Electronics & Semiconductor Solutions",
-    description: "Sourcing verified electronic components for critical sectors.",
+    description: "Zentrix System Ltd – Supporting manufacturers, OEMs, research institutions, startups and technology innovators with electronic components, semiconductor technologies, PCB engineering and product development solutions.",
     type: "website",
     locale: "en_US",
     url: "https://zentrix-electronics.com",
-    siteName: "Zentrix Electronics",
+    siteName: "Zentrix System Ltd",
   },
   robots: {
     index: true,

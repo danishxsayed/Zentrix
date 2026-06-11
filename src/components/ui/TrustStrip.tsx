@@ -23,7 +23,7 @@ export default function TrustStrip() {
     {
       icon: Globe,
       title: "Global Supply Chain",
-      desc: "Distributed shipping hubs for reliable delivery across Americas, EU, and Asia.",
+      desc: "Delivering component and engineering solutions through trusted manufacturing and supply partnerships worldwide.",
     },
   ];
 

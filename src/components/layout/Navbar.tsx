@@ -55,9 +55,9 @@ export default function Navbar() {
               <Image
                 src="/logo.png"
                 alt="Zentrix Logo"
-                width={160}
-                height={48}
-                className="h-12 w-auto object-contain rounded-[10px]"
+                width={187}
+                height={56}
+                className="h-14 w-auto object-contain rounded-[10px]"
                 priority
               />
             </Link>

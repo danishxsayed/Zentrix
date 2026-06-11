@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, UploadCloud } from "lucide-react";
+import { ArrowRight, UploadCloud, CheckCircle2 } from "lucide-react";
 import StatsRow from "@/components/ui/StatsRow";
 import IndustryCard from "@/components/ui/IndustryCard";
 import ProductCategoryCard from "@/components/ui/ProductCategoryCard";
@@ -240,6 +241,96 @@ export default function Home() {
                 index={idx}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 5: PCB ASSEMBLY & OEM SERVICES */}
+      <section className="py-20 md:py-28 bg-[#050811] border-y border-brand-border/40 relative">
+        <div className="absolute inset-0 bg-dot-grid opacity-30 z-0" />
+        <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            
+            {/* Image Column */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 relative group"
+            >
+              <div className="relative h-[300px] sm:h-[400px] w-full rounded-3xl overflow-hidden border border-brand-border/60 shadow-2xl">
+                <Image
+                  src="/pcb-assembly-home.png"
+                  alt="Zentrix PCB Assembly Services"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050811]/70 via-transparent to-transparent" />
+              </div>
+              {/* Outer decorative glowing ring */}
+              <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-brand-cyan/20 to-transparent blur-lg opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none -z-10" />
+            </motion.div>
+
+            {/* Content Column */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 space-y-8"
+            >
+              <div className="space-y-4">
+                <span className="text-xs uppercase font-display font-semibold tracking-widest text-brand-cyan">Manufacturing & OEM Solutions</span>
+                <h2 className="text-3xl md:text-4xl font-display font-extrabold text-brand-text leading-tight">
+                  Custom PCB Assembly & <br />
+                  <span className="text-brand-cyan">OEM Engineering Services</span>
+                </h2>
+                <p className="text-sm md:text-base font-sans text-brand-muted leading-relaxed">
+                  Professional PCB engineering, assembly and manufacturing solutions from concept to production. We support component sourcing, prototype fabrication, SMT & THT assembly, and full-scale OEM manufacturing.
+                </p>
+              </div>
+
+              {/* Bullet list of advantages */}
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 font-sans text-sm text-brand-text/90">
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-brand-cyan shrink-0" />
+                  <span>Turnkey SMT & THT Assembly</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-brand-cyan shrink-0" />
+                  <span>Fast-Turn Prototyping</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-brand-cyan shrink-0" />
+                  <span>Full BOM Procurement</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-brand-cyan shrink-0" />
+                  <span>Strict AOI & Function Testing</span>
+                </li>
+              </ul>
+
+              <div className="pt-4 flex flex-col sm:flex-row items-center gap-4">
+                <Link
+                  href="/pcb-assembly"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-brand-cyan hover:bg-brand-cyan-dark text-brand-bg font-sans font-bold text-sm transition-all duration-300 hover:shadow-glow-cyan group"
+                >
+                  Explore PCB Services
+                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/rfq"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-transparent hover:bg-brand-card/50 border border-brand-border/80 hover:border-brand-cyan/60 text-brand-text font-sans font-semibold text-sm transition-all duration-300"
+                >
+                  Request a PCBA Quote
+                </Link>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </section>
